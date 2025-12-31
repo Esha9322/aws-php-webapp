@@ -1,0 +1,4 @@
+*.pem
+config.php
+vendor/
+
