@@ -24,13 +24,30 @@ This repository represents a production-ready cloud architecture commonly used i
 
 ## Architecture Overview
 
-flowchart TB
-    
-U [User / Browser]
-    U -->     |HTTP| EC2[Amazon EC2<br/>Apache + PHP]
-EC2 -->   |MySQL| RDS[(Amazon RDS<br/>MySQL)]
-    EC2 -->   |IAM Role| S3[(Amazon S3<br/>Private Files)]
- EC2 -->  |Application Logs| CW[(Amazon CloudWatch<br/>Audit Logs)]
+User (Browser)
+      |
+      | HTTP
+      v
+      
+Amazon EC2 (Apache + PHP)
+      |
+      | MySQL
+      v
+      
+Amazon RDS (MySQL Database)
+
+Amazon EC2
+      |
+      | IAM Role
+      v
+      
+Amazon S3 (Private Files)
+
+Amazon EC2
+      |
+      v
+      
+Amazon CloudWatch (Audit Logs)
 
 
 ## Technology Stack
