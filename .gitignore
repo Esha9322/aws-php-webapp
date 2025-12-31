@@ -1,4 +1,16 @@
-*.pem
-config.php
+# Dependencies
 vendor/
+
+# Secrets
+db.php
+.env
+*.pem
+*.key
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
 
