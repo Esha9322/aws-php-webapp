@@ -24,27 +24,19 @@ This repository represents a production-ready cloud architecture commonly used i
 
 ## Architecture Overview
 
-User (Browser)
- 
-            |
-   
-   
-EC2 Instance (Apache + PHP)
- 
-          |
-   
-
-Amazon RDS (MySQL Database)
-
-          |
-    
-   
-Amazon S3 (Optional File Storage)
-
-           |
-
-   
-Amazon CloudWatch (Monitoring & Logs)
+User
+  |
+  | HTTP
+  v
+Amazon EC2 (Apache + PHP)
+  |        \
+  |         \ IAM Role
+  v          v
+Amazon RDS   Amazon S3
+(MySQL)      (Private Files)
+  |
+  v
+Amazon CloudWatch (Audit Logs)
 
 
 
