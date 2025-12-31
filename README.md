@@ -104,20 +104,6 @@ aws-php-webapp/
 - Launch EC2 instance with Apache and PHP installed
 - Create RDS MySQL instance with restricted access
 
-### Application Deployment
-
-cd /var/www/html
-sudo git clone https://github.com/your-username/aws-php-webapp.git
-sudo chown -R www-data:www-data /var/www/html
-
-### Database Configuration
-
-CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(50),
-  email VARCHAR(100)
-);
-
 
 
 ## Monitoring & Observability
