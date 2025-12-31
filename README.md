@@ -28,14 +28,17 @@ User
   |
   | HTTP
   v
+  
 Amazon EC2 (Apache + PHP)
   |        \
   |         \ IAM Role
   v          v
+  
 Amazon RDS   Amazon S3
 (MySQL)      (Private Files)
   |
   v
+  
 Amazon CloudWatch (Audit Logs)
 
 
