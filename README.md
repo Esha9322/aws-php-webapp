@@ -24,23 +24,12 @@ This repository represents a production-ready cloud architecture commonly used i
 
 ## Architecture Overview
 
-User
-  |
-  | HTTP
-  v
-  
-Amazon EC2 (Apache + PHP)
-  |        \
-  |         \ IAM Role
-  v          v
-  
-Amazon RDS   Amazon S3
-(MySQL)      (Private Files)
-  |
-  v
-  
-Amazon CloudWatch (Audit Logs)
-
+flowchart TB
+    U[User / Browser]
+    U -->|HTTP| EC2[Amazon EC2<br/>Apache + PHP]
+    EC2 -->|MySQL| RDS[(Amazon RDS<br/>MySQL)]
+    EC2 -->|IAM Role| S3[(Amazon S3<br/>Private Files)]
+    EC2 -->|Application Logs| CW[(Amazon CloudWatch<br/>Audit Logs)]
 
 
 ## Technology Stack
@@ -88,10 +77,15 @@ Amazon CloudWatch (Audit Logs)
 
 aws-php-webapp/
 |
+
 |-- index.php        # User input form
+
 |-- db.php           # Database connection logic
+
 |-- display.php      # Displays stored user data
+
 |-- .gitignore       # Git ignore rules
+
 |-- README.md        # Project documentation
 
 
