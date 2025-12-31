@@ -24,30 +24,19 @@ This repository represents a production-ready cloud architecture commonly used i
 
 ## Architecture Overview
 
-User (Browser)
-      |
-      | HTTP
-      v
-      
-Amazon EC2 (Apache + PHP)
-      |
-      | MySQL
-      v
-      
-Amazon RDS (MySQL Database)
+How This Architecture Works :
 
-Amazon EC2
-      |
-      | IAM Role
-      v
-      
-Amazon S3 (Private Files)
+Users access the PHP web application hosted on Amazon EC2 
 
-Amazon EC2
-      |
-      v
-      
-Amazon CloudWatch (Audit Logs)
+The application server runs Apache HTTP Server with PHP
+
+User data is stored securely in Amazon RDS (MySQL) with restricted network access
+
+Uploaded files are stored in private Amazon S3 buckets
+
+IAM roles are used to grant EC2 secure access to AWS services (no credentials stored in source code)
+
+All upload, download, and delete activities are centrally logged and monitored using Amazon CloudWatch
 
 
 ## Technology Stack
