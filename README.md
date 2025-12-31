@@ -25,17 +25,25 @@ This repository represents a production-ready cloud architecture commonly used i
 ## Architecture Overview
 
 User (Browser)
+
    |
    v
+   
 EC2 Instance (Apache + PHP)
+
    |
    v
+
 Amazon RDS (MySQL Database)
+
    |
    v
+   
 Amazon S3 (Optional File Storage)
+
    |
    v
+   
 Amazon CloudWatch (Monitoring & Logs)
 
 
